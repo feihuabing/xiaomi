@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单中心</title>
+    <link rel="stylesheet" href="css/all.css"/>
+    <script src="common.js"></script>
+    <link rel="stylesheet" href="css/order.css"/>
+</head>
+<body onload="start()">
+    <div id="header" class="p50_0 bdbddd">
+        <div class="w1300 mcenter c888">
+            <span class="fz40 ml40 mr20">我的订单</span>请谨防钓鱼链接或诈骗电话
+            <a href="" id="user" class="float_right mr40 mt20"></a>
+        </div>
+    </div>
+    <div class="w1300 mcenter h30 lh30">
+        <a href="" id="my">个人中心</a>>订单中心
+    </div>
+    <div class="w100" id="order">
+        <table></table>
+    </div>
+    <script>
+        function start(){
+            var urlParams = new URLSearchParams(location.search);
+            uid = urlParams.get('uid');
+            if(uid!=null){
+                var xhr = createXhr();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var res = xhr.responseText;
+                        $("user").innerHTML=res;
+                        $("user").href="user.html?uid="+uid;
+                        $("my").href="user.html?uid="+uid;
+                    }
+                }
+                xhr.open('get','/user/selectuname?uid='+uid,true)
+                xhr.send(null);
+            }
+            gethavebuy();
+        }
+        function changedate(date){
+            date=date.split(" ");
+            date[0]=date[0].split("-");
+            var year=date[0][0];
+            var month=date[0][1];
+            var day=date[0][2];
+            date[1]=date[1].split(":");
+            var hour=date[1][0];
+            var minute=date[1][1];
+            return year+"年"+month+"月"+day+"日"+" "+hour+":"+minute;
+        }
+        function gethavebuy(){
+            var xhr = createXhr();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var res = xhr.responseText;
+                    res = JSON.parse(res);
+                    console.log(res);
+                    for(var i in res){
+                        $("order").innerHTML=$("order").innerHTML+`<div class="m30auto w1300 bdaaa"><div class="w1300 bdbddd p20_0"><p class="fz24 ml20 mt20">未收货</p><span class="ml20 mt20 inline_block">${changedate(res[i].shoppingdate)}</span><span class="float_right fz40">${parseInt(res[i].price)}<span>.00<span class="fz18 mr30 ">元</span></span></span><span class="float_right mr20 mt20">订单金额</span></div><div class="w1300 p20_0"><p class="ml20">${res[i].product_name}&nbsp;${res[i].spec}&nbsp;${res[i].color}</p><p class="ml20 mt10" ><span>${parseInt(res[i].price)/res[i].product_num}</span>元*<span>${res[i].product_num}</span></p></div></div>`;
+                        if(res[i].over!="无"){
+                            $("order").innerHTML=$("order").innerHTML+`<div class="mcenter w1300 bdaaa"><span class="ml20">${res[i].over}</span></div>`
+                        }
+                    }
+                }
+            }
+            xhr.open('get','/product/selecthavebuy?uid='+uid,true)
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@media screen and (min-width: 1301px){
+    #header{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1300px){
+    #header{
+        width: 1300px
+    }
+}
+.fz40{
+    font-size: 40px;
+}
+.m30auto{
+    margin: 30px auto 0;
+}
+.h30{
+    height: 30px;
+}
+.lh30{
+    line-height: 30px;
+}
+.p20_0{
+    padding: 20px 0;
+}

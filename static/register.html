@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>小米账户-注册</title>
+	 <script src="common.js"></script>
+	 <link rel="stylesheet" href="css/register.css"/>
+ </head>
+ <body>
+	<div id="d1">
+		<div id="d2">
+			<img src="./img/milogo.png" alt="">
+			<span id="s1">注册小米账号</span>
+			国家/地区<br>
+			<div id="china" onclick="fn()" onmouseout="fn1()">中国</div><div id="xiala" onmouseover="fn()" onmouseout="fn1()">
+				<div class="hbgglay" onclick="tcna()">中国</div>
+				<div class="hbgglay" onclick="tctw()">中国台湾</div>
+				<div class="hbgglay" onclick="tcxg()">中国香港</div>
+				<div class="hbgglay" onclick="tcam()">中国澳门</div>
+				<div class="hbgglay" onclick="tam()">American</div>
+				<div class="hbgglay" onclick="ten()">England</div>
+				<div class="hbgglay" onclick="taus()">Australia</div>
+				<div class="hbgglay" onclick="tjp()">Japan</div>
+				<div class="hbgglay" onclick="tfc()">France</div>
+				<div class="hbgglay" onclick="tgg()">Gongo</div>
+			</div>
+			<span id="s2">成功注册帐号后，国家/地区将不能被修改</span>
+			<p>手机号码</p>
+
+			<form action="user/checkPhone"  method="get">
+			<input type="text" placeholder="请输入11位手机号码" id="phone" name="phone" onblur="checkPhone()" maxlength=11>
+			<div id="phoneW"></div>
+			<input type="submit"value="立即注册" id="register" disabled >
+			</form>
+			
+		</div>
+	</div>
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		function fn(){
+			$("xiala").style.display="block";
+		}
+		function fn1(){
+			$("xiala").style.display="none";
+		}
+		function tcna(){
+			$("china").innerHTML="中国";
+			fn1();
+		}
+		function tctw(){
+			$("china").innerHTML="中国台湾";
+			fn1();
+		}
+		function tcxg(){
+			$("china").innerHTML="中国香港";
+			fn1();
+		}
+		function tcam(){
+			$("china").innerHTML="中国澳门";
+			fn1();
+		}
+		function tam(){
+			$("china").innerHTML="American";
+			fn1();
+		}
+		function ten(){
+			$("china").innerHTML="England";
+			fn1();
+		}
+		function taus(){
+			$("china").innerHTML="Australia";
+			fn1();
+		}
+		function tjp(){
+			$("china").innerHTML="Japan";
+			fn1();
+		}
+		function tfc(){
+			$("china").innerHTML="France";
+			fn1();
+		}
+		function tgg(){
+			$("china").innerHTML="Gongo";
+			fn1();
+		}
+		function checkPhone(){
+			var a = $("phone").value;
+			var b = parseInt(a);
+			if (a.length==0)
+			{
+				$("phoneW").innerHTML="号码未输入";
+				$("phoneW").style.color="red";
+			}else if(a.search(/1[3-8]\d{9}$/)==-1){
+				$("phoneW").innerHTML="号码格式错误";
+				$("phoneW").style.color="red";
+			}else{
+				$("phoneW").innerHTML="号码格式正确";
+				$("phoneW").style.color="black";
+				$("register").disabled=false;
+			}
+		}
+		function register(){
+			var xhr = createXhr();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res = xhr.responseText;
+					alert(res);
+
+					$("phoneW").innerHTML=res;
+					$("phoneW").style.color="red";
+				}
+			}
+			phone = $("phone").value;
+			xhr.open("get","/user/checkPhone?phone="+phone,true)
+			xhr.send(null)
+		}
+	</script>
+ </body>
+</html>

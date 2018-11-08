@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米账号-登录</title>
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="common.js"></script>
+</head>
+<body onload="phone()">
+    <div id="d1">
+        <div>
+            <a href="index.html"><img src="img/mistore_logo.png" alt=""/></a>
+        </div>
+    </div>
+    <div id="d2">
+        <img src="img/xm8inf.jpg" alt=""/>
+
+    </div>
+    <div id="d3">
+        <span id="d3-s1" onclick="zhdl()">账号登录</span><span id="d3-s2"></span><span id="d3-s3" onclick="smdl()">扫码登录</span>
+        <div id="d4">
+            <form action="/user/login" method="post">
+            <input type="text" placeholder="邮箱/手机号码/小米ID" id="uname" name="uname" onblur="checkUname()"/>
+            <span id="check_uname"></span>
+            <input type="password" placeholder="密码" id="upwd" name="upwd"/>
+            <span id="check_upwd"></span>
+            <input type="submit" value="登录" id="login"/>
+            </form>
+            <a href="" class="float_right a_dnone mr31 ml10 fz14 hcff6700">忘记密码</a><span class="float_right ml10 fz14">|</span><a href="register.html" class="float_right a_dnone fz14 hcff6700">立即注册</a>
+            <p class="text_center clearboth mt80 fz14 mb40">其他登录方式</p>
+            <div id="d4-d1" class="bcenter">
+                <a href="" title="QQ登录"><div id="d4-d1-1" class="bd-radius w20h20 mr50"></div></a>
+                <a href="" title="微博登录"><div id="d4-d1-2" class="bd-radius w20h20 mr50"></div></a>
+                <a href="" title="支付宝登录"><div id="d4-d1-3" class="bd-radius w20h20 mr50"></div></a>
+                <a href="" title="微信登录"><div id="d4-d1-4" class="bd-radius w20h20 mr50"></div></a>
+            </div>
+         </div>
+        <div id="d5">
+            <img src="img/smdl.png"alt=""/>
+            <p class="text_center fz14">使用 <span class="cff6700">小米商城APP</span> 扫一扫</p>
+            <p class="text_center fz14">小米手机可打开「设置」>「小米帐号」扫码登录</p>
+        </div>
+        <script>
+            function zhdl(){
+                $("d4").style.display="block";
+                $("d3-s1").style.color="#ff6700";
+                $("d5").style.display="none";
+                $("d3-s2").style.color="#555555";
+            }
+            function smdl(){
+                $("d5").style.display="block";
+                $("d3-s2").style.color="#ff6700";
+                $("d4").style.display="none";
+                $("d3-s1").style.color="#555555";
+            }
+            function phone(){
+                var urlParams=new URLSearchParams(location.search);
+                var phone=urlParams.get('phone');
+                $("uname").value=phone;
+            }
+            function checkUname(){
+                var xhr = createXhr();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var res = xhr.responseText;
+                        $("check_uname").innerHTML=res;
+                    }
+                }
+                uname = $("uname").value;
+                xhr.open("get","/user/checkUname?uname="+uname,true);
+                xhr.send(null);
+            }
+        </script>
+    </div>
+
+</body>
+</html>

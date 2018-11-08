@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/all.css"/>
+    <script src="common.js"></script>
+    <style>
+        #d1{
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin-left:-500px;
+            margin-top:-252px;
+        }
+        #day30{
+            display: none;
+        }
+        #day29{
+            display: none;
+        }
+        #day28{
+            display: none;
+        }
+        #d2{
+            width: 400px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #hidden{
+            text-align: center;
+            line-height: 46px;
+            font-size: 14px;
+            cursor:pointer;
+        }
+        #all{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, .5);
+            top:0;
+            display: none;
+        }
+    </style>
+</head>
+<body onload="start()">
+    <div class="w1000 mcenter p50_0">
+        <img src="img/n-logo.png" alt=""/>
+        <a class="bd0 outlinenone float_right bgwhite pointer" id="ret">返回</a>
+    </div>
+    <div class="w1000h450 bdaaa bdr5 mcenter dflex">
+        <div class="w320">
+            <div class="w100px bdradius overflow_hidden m100auto">
+                <img src="img/mrtx.jpg" style="width: 100px;height: 100px;" alt=""/>
+            </div>
+            <a href="" class="dblock cskyblue text_center mt20 fz14">修改头像</a>
+        </div>
+        <div>
+            <p class="mt50 w600 bdbddd p10_0 fz18 font_bold">基础资料 <button class="cskyblue bd0 bgwhite outlinenone pointer float_right" onclick="showd1()">编辑</button></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">姓名：<span id="user_name"></span></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">生日：<span id="birthday"></span></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">性别：<span id="gender"></span></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">邮箱：<span id="email"></span></p>
+            <p class="bdbddd p10_0 fz18 font_bold w600 mt20">高级设置></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">银行卡<button class="cskyblue bd0 bgwhite outlinenone pointer float_right">设置</button></p>
+        </div>
+    </div>
+    <div id="all">
+    <div class="w1000h450 bdaaa bdr5 dflex bgwhite" id="d1">
+        <div class="mcenter">
+            <form action="/user/updateUser" method="get">
+            <p class="mt50 w600 bdbddd p10_0 fz18 font_bold">编辑基础资料</p>
+            <p class="fz14 caaa w600 bdbddd p10_0">姓名：<input type="text" name="user_name" id="user_name1"/></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">生日：<select name="year" id="year"  onblur="checkDay()">
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+            </select>
+                <select name="month" id="month" onblur="checkDay()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="day" id="day31">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="day" id="day30">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+                <select name="day" id="day29">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                </select>
+                <select name="day" id="day28">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                </select>
+
+            </p>
+            <p class="fz14 caaa w600 bdbddd p10_0">性别：<input type="radio" name="gender" value="1" id="man" checked="checked"/><label
+                    for="man">男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="0" id="woman"/><label
+                    for="woman">女</label></p>
+            <p class="fz14 caaa w600 bdbddd p10_0">邮箱：<input type="text" name="email" id="email1"/></p>
+            <input type="hidden" name="uid" id="uid"/>
+            <div id="d2">
+            <input type="submit" value="保存" class="bgff6700 bd0 outlinenone w168h46 cwhite"/>
+                <div class="bdaaa bgwhite w168h46" onclick="hiddend1()" id="hidden">返回</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+       function showd1(){
+           $("all").style.display="flex";
+       }
+        function hiddend1(){
+            $("all").style.display="none";
+        }
+        function checkDay(){
+            if($("year").value%4==0){
+                if($("month").value==1){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==2){
+                    $("day31").style.display="none";
+                    $("day30").style.display="none";
+                    $("day29").style.display="inline-block";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==3){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==4){
+                    $("day31").style.display="none";
+                    $("day30").style.display="inline-block";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==5){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==6){
+                    $("day31").style.display="none";
+                    $("day30").style.display="inline-block";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==7){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==8){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==9){
+                    $("day31").style.display="none";
+                    $("day30").style.display="inline-block";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==10){
+                    $("day31").style.display="inline-block";
+                    $("day30").style.display="none";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==11){
+                    $("day31").style.display="none";
+                    $("day30").style.display="inline-block";
+                    $("day29").style.display="none";
+                    $("day28").style.display="none";
+                }
+                if($("month").value==12) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+            }else if($("year").value%4!=0) {
+                if ($("month").value == 1) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 2) {
+                    $("day31").style.display = "none";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "inline-block";
+                }
+                if ($("month").value == 3) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 4) {
+                    $("day31").style.display = "none";
+                    $("day30").style.display = "inline-block";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 5) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 6) {
+                    $("day31").style.display = "none";
+                    $("day30").style.display = "inline-block";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 7) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 8) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 9) {
+                    $("day31").style.display = "none";
+                    $("day30").style.display = "inline-block";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 10) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 11) {
+                    $("day31").style.display = "none";
+                    $("day30").style.display = "inline-block";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+                if ($("month").value == 12) {
+                    $("day31").style.display = "inline-block";
+                    $("day30").style.display = "none";
+                    $("day29").style.display = "none";
+                    $("day28").style.display = "none";
+                }
+            }
+        }
+        function start(){
+            var urlParams=new URLSearchParams(location.search);
+            uid=urlParams.get('uid');
+            $("ret").href="user.html?uid="+uid;
+            $("uid").value=uid;
+            var xhr = createXhr();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var res = xhr.responseText;
+                    res = JSON.parse(res);
+                    console.log(res);
+                    var user_name = res[0].user_name;
+                    var phone = res[0].phone;
+                    var email = res[0].email;
+                    var birthday = res[0].birthday;
+                    if(birthday!=null){
+                        $("birthday").innerHTML=birthday;
+                    }else{
+                        $("birthday").innerHTML="未填写";
+                    }
+                    var birthday=String(birthday).split("-");
+                    var year = birthday[0];
+                    console.log(year);
+                    var month = birthday[1];
+                    var day = birthday[2];
+                    var gender = res[0].gender;
+                    console.log(gender);
+                   if(user_name!=null){
+                       $("user_name").innerHTML=user_name;
+                       $("user_name1").value=user_name;
+                   }else{
+                       $("user_name").innerHTML="未填写";
+                   }
+                    if(gender!=null){
+                        if(gender==1){
+                            $("gender").innerHTML="男";
+                            $("man").checked=true;
+                        }else{
+                            $("gender").innerHTML="女";
+                            $("woman").checked=true;
+                        }
+                    }else{
+                        $("gender").innerHTML="未填写";
+                    }
+                    if(email!=null){
+                        $("email").innerHTML=email;
+                        $("email1").value=email;
+                    }else{
+                        $("email").innerHTML="未填写";
+                    }
+                    if(year!="null"){
+                        $("year").value=year;
+                        $("month").value=month;
+                        document.getElementsByName(day).value=day;
+                    }
+
+                }
+            }
+            xhr.open('get','/user/selectuser?uid='+uid,true);
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>

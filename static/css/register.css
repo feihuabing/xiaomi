@@ -1,0 +1,97 @@
+body{
+    background: #f9f9f9;
+    font-size:14px;
+}
+#d1{
+    height: 548px;
+    width: 854px;
+    margin:100px auto;
+    display:flex;
+    justify-content:center;
+    background:white;
+}
+#d2{
+    width: 332px;
+    height: 548px;
+
+}
+#d1>div>img{
+    display:block;
+    margin:0 auto;
+    margin-bottom: 40px;
+}
+#s1{
+    display:block;
+    text-align:center;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+#china{
+    width: 290px;
+    height: 40px;
+    border: 1px solid #eee;
+    padding:0 20px;
+    line-height: 40px;
+    margin-top: 10px;
+    color: #555;
+    position: relative;
+    cursor:pointer;
+    font-size:14px;
+}
+#china:focus #xiala{
+    display:block;
+}
+#xiala{
+    width:332px ;
+    height: 270px;
+    position: absolute;
+    top:322px;
+    margin: 0 auto;
+    line-height: 40px;
+    overflow:auto;
+    border:1px solid #eee;
+    display:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.hbgglay{
+
+    border-bottom: 1px solid #eee;
+    background: white;
+    padding:0 20px ;
+}
+.hbgglay:hover{
+    background: rgba(200,200,200,1);
+}
+#phone{
+    width: 310px;
+    height:40px;
+    padding:0px 10px;
+
+}
+#register{
+    background: #ff6700;
+    box-shadow:0px;
+    width: 334px;
+    height: 40px;
+    margin-top:30px ;
+    border: 0px;
+    color: #fff;
+    cursor:pointer;
+}
+#register:hover{
+    background: rgba(255,103,0,0.8);
+}
+#s2{
+    color: #f00;
+    font-size: 12px;
+}
+#phoneW{
+    height: 20px;
+    font-size: 12px;
+}
+.upwd{
+    width: 310px;
+    height:40px;
+    padding:0px 10px;
+}

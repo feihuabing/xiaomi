@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>小米账户-注册</title>
+	 <script src="common.js"></script>
+	 <link rel="stylesheet" href="css/register.css"/>
+	 <link rel="stylesheet" href="css/all.css"/>
+ </head>
+ <body>
+	<div id="d1">
+		<div id="d2">
+			<img src="./img/milogo.png" alt="">
+			<span id="s1">注册小米账号</span>
+
+			<form action="user/register" method="post">
+			<input type="password" name="upwd" class="upwd mt20" placeholder="输入密码6-12位" maxlength="12" onblur="checkPwd()" id="upwd"/>
+			<p class="w94h21 fz12 mb10" id="cupwd"></p>
+			<input type="password" name="upwd1" class="upwd" placeholder="再次输入密码"  maxlength="12" id="upwd1"  onblur="checkPwd1()"/>
+				<input type="hidden" name="phone" id="phone"/>
+			<p class="w94h21 fz12 mb10" id="cupwd1"></p>
+			<input id="register" type="submit" disabled value="确定" class="text_center">
+
+			</form>
+		</div>
+	</div>
+	<script>
+		function checkPwd(){
+			var urlParams=new URLSearchParams(location.search);
+			var phone=urlParams.get('phone');
+			$("phone").value=phone;
+			var upwd = $("upwd").value;
+			var upwd1 = $("upwd1").value;
+			if (upwd.length==0)
+			{
+				$("cupwd").innerHTML="密码未输入";
+				$("cupwd").style.color="red";
+			}else if(upwd.length<6){
+				$("cupwd").innerHTML="密码太短";
+				$("cupwd").style.color="red";
+			}else{
+				$("cupwd").innerHTML="密码可用";
+				$("cupwd").style.color="black";
+			}
+			if(upwd1!=""&&upwd!=upwd1){
+				$("cupwd1").innerHTML="密码不一致";
+				$("cupwd1").style.color="red";
+				$("register").disabled=true;
+			}
+		}
+		function checkPwd1(){
+			var upwd = $("upwd").value;
+			var upwd1 = $("upwd1").value;
+			if(upwd!=upwd1){
+				$("cupwd1").innerHTML="密码不一致";
+				$("cupwd1").style.color="red";
+			}else{
+				$("cupwd1").innerHTML="密码一致";
+				$("cupwd1").style.color="black";
+				$("register").disabled=false;
+			}
+		}
+		function register(){
+			var urlParams=new URLSearchParams(location.search);
+			var phone=urlParams.get('phone');
+			var xhr = createXhr();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var res = xhr.responseText;
+					console.log(res);
+				}
+			}
+			upwd=$("upwd").value;
+			xhr.open("post","/user/register",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var url="phone="+phone+"&upwd="+upwd
+			xhr.send(url);
+		}
+	</script>
+ </body>
+</html>

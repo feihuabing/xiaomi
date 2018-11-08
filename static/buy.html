@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/buy.css"/>
+    <script src="common.js"></script>
+    <script src="js/all.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="w1300 mcenter">
+            <img src="img/milogo.png" class="vertical_align_middle" alt=""/><span class="ml50 fz36 vertical_align_middle">确认订单</span>
+            <span class="float_right mt20 vertical_align_middle">
+                <a href="" id="user" class="fz14"></a>
+            </span>
+        </div>
+    </div>
+    <div class="body bgf5f5f5 p50_0" id="body">
+        <div class="w1300 bgwhite mcenter">
+            <table></table>
+            <p class="mt50 ml30 fz20 font_bold">
+                收货地址:无锡市锡山区东亭镇
+            </p>
+            <p class="float_right mt50 fz14 mr30">
+                <a href=""class="caaa" id="return">返回购物车></a>
+            <p class="ml30 mt50 font_bold fz18 bdbddd" >
+                商品
+        </p>
+            </p>
+            <p class="mt20">
+                <span class="ml30 w500 inline_block">商品名</span><span class="w260 inline_block">额外服务</span><span class="w260 inline_block">单价</span><span>总价</span>
+            </p>
+            <div id="product" class="bdbddd">
+
+            </div>
+            <div class="ml30 fz26 mt20 bdbddd">
+                配送方式 <span class="fz18 ml40 cff6700">包邮</span>
+            </div>
+            <div class="ml30 fz26 mt20 bdbddd">
+                发票 <span class="fz14 ml50 cff6700">电子发票&nbsp;&nbsp;&nbsp;&nbsp;个人</span>
+            </div>
+            <div class="mt20 ml30">
+                <p class="mt10">商品件数:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="num" class="cff6700 ml20">0</span></p>
+                <p class="mt10">商品总价:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="allprice" class="cff6700 ml20"></span></p>
+                <p class="mt10">运费:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="cff6700 ml50">0元</span></p>
+                <p class="mt10 fz26 bdbddd">应付总额:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="allprice1" class="cff6700"></span></p>
+            </div>
+            <div class="ml20">
+                <button class="w200h40 bgff6700 cwhite bd0 pointer" onclick="pay()">支付</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var urlParams=new URLSearchParams(location.search);
+        var sid=urlParams.get('sid');
+        var sid = sid.split(",");
+        sid.length--;
+        var price=urlParams.get('price');
+        $("allprice").innerHTML=price+"元";
+        $("allprice1").innerHTML=price+"元";
+        var uid=urlParams.get('uid');
+        var xhr = createXhr();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                var res = xhr.responseText;
+                $("user").value=res;
+            }
+        }
+        xhr.open('get','/user/selectuname?uid='+uid,true)
+        xhr.send(null);
+        $("user").href="user.html?uid="+uid;
+        $("return").href="shoppingCart.html?uid="+uid;
+        for(var onesid in sid) {
+            getproduct(sid[onesid]);
+        }
+        function over(i){
+            if(i==0){
+                return "无";
+            }else if(i==1){
+                return "意外保障服务";
+            }else{
+                return "碎屏保障服务";
+            }
+        }
+        var allname="";
+        var allspec="";
+        var allcolor="";
+        var allover="";
+        var allprice="";
+        var allnum='';
+        function getproduct(){
+            var xhr = createXhr();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    var res = JSON.parse(res);
+                    $("num").innerHTML=parseInt($("num").innerHTML)+parseInt(res[0].product_num);
+                    $("product").innerHTML+=`<span class="ml30 w500 inline_block mt20">${res[0].product_name}&nbsp;&nbsp;&nbsp;${res[0].spec}&nbsp;&nbsp;&nbsp;${res[0].color}</span><span  class="w260 inline_block">${over(res[0].over)}</span><span class="w260 inline_block">${res[0].price}*${res[0].product_num}</span><span class="cff6700">${parseInt(res[0].price)*res[0].product_num}元</span><br>`;
+                    allname=allname+res[0].product_name+",";
+                    allspec=allspec+res[0].spec+",";
+                    allcolor=allcolor+res[0].color+",";
+                    allover=allover+over(res[0].over)+",";
+                    allprice=allprice+res[0].price+",";
+                    allnum=allnum+res[0].product_num+",";
+                }
+            }
+            xhr.open('get', '/product/getProductBysid?sid='+arguments[0], true)
+            xhr.send(null);
+        }
+        var sid=urlParams.get('sid');
+        var sid = sid.split(",");
+        sid.length--;
+        var sid = sid.join();
+        function pay(){
+            var xhr = createXhr();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+
+                }
+            }
+            xhr.open('get','/product/joinHaveBuy?allname='+allname+"&allcolor="+allcolor+"&allspec="+allspec+"&allprice="+allprice+"&allnum="+allnum+"&allover="+allover+"&uid="+uid,true);
+            xhr.send(null);
+            var timer = setTimeout(()=>{
+                var xhr = createXhr();
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var res = xhr.responseText;
+                        if(res!=0){
+                            alert("购买成功");location.href="index.html?uid="+uid;
+                        }
+                    }
+                }
+                xhr.open('get','/product/havepay?sid='+sid,true);
+                xhr.send(null);
+            },100);
+        }
+    </script>
+</body>
+</html>

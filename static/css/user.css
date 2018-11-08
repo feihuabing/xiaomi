@@ -1,0 +1,267 @@
+*{
+    margin:0;
+}
+body{
+
+}
+#header{
+    background:#333;
+    display:flex;
+	position:relative;
+	z-index:3;
+    
+}
+#header1{
+    background:#333;
+    margin: 0 auto;
+    display:flex;
+    min-width:1300px;
+    height:40px;
+    justify-content:flex-start;
+    flex-shrink:0;
+    position:relative;
+    
+
+}
+#headlist{
+    background:#333;
+    width:492px;
+    height:40px;
+    display:flex;
+    justify-content:space-between;
+    
+}
+#headlist a{
+    text-decoration:none;
+    color:#b0b0b0;
+    font-size:12px;
+    line-height:40px;
+    
+}
+#headlist a:hover{
+
+    color:#fff;
+
+}
+#login,#reg,#info{
+    color:#b0b0b0;
+    line-height:40px;
+    font-size:12px;
+    text-decoration:none;
+}
+.cb0b0b0{
+    color: #b0b0b0;
+}
+#tuichu,#user{
+    line-height:40px;
+    text-decoration:none;
+    border: 0;
+}
+#user,#tuichu{
+    background: #333;
+    font-size: 12px;
+    outline: none;
+}
+#info{
+    position:absolute;
+    left:1100px;
+}
+#reg{
+    position:relative;
+    left:545px;
+}
+#user{
+    position:absolute;
+    left:950px;
+}
+#tuichu{
+    position:absolute;
+    left:1050px;
+}
+#login{
+    position:relative;
+    left:530px;
+}
+#header1>a:hover{
+    color:#fff;
+}
+#shoppingcar{
+    height:40px;
+    width:120px;
+    background:#ff3600;
+    position:absolute;
+    left:1180px;
+}
+#shoppingcar a{
+    width:120px;
+    display:inline-block;
+    line-height:40px;
+    text-align:center;
+    font-size:12px;
+    color:white;
+    text-decoration:none;
+}
+#shoppingcar img{
+
+    vertical-align:middle;
+    
+}
+#headerxiala{
+    height: 0;
+    overflow: auto;
+    top: 0;
+    max-height: 300px;
+    width:320px;
+    background:white;
+    text-align:center;
+    left: 978px;
+    font-size:12px;
+    z-index:20;
+    border:1px solid #ddd;
+    
+}
+#shoppingcar:hover #headerxiala{
+    display:block;
+}
+#header2{
+
+   
+    height:100px;
+	position:relative;
+	top: 0;
+	left: 0;
+	background: white;
+	z-index:2;
+    
+
+}
+#header3{
+    
+    margin: 0 auto;
+    width:1300px;
+    height:100px;
+    position:relative;
+	top: 0;
+	left: 0;
+	z-index:2;
+    display:flex;
+	background: #fff;
+}
+#milogo{
+    position:relative;
+    top:18px;
+    vertical-align:middle;
+   
+    background: white;
+}
+#a816{
+    display:block;
+    width:165px;
+    height:100px;
+    margin-left:10px;
+    background: white;
+    
+
+}
+#b818{
+    margin-top:15px;z-index:1;
+}
+#d1{
+    width:680px;
+    height:100px;
+    background: white;
+    
+    display:flex;
+    justify-content:space-around;
+}
+#d1>a{
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    line-height:100px;
+    background: white;
+    
+}
+#d1>a:hover{
+
+    color:red;
+
+}
+#searchtext{
+    display:block;
+    width: 245px;
+    height: 48px;
+    position: relative;
+    top:25px;
+    left:58px;
+    border:1px solid #ddd;
+    padding: 0 10px;
+    background: white;
+	
+    
+}
+#searchbutton{
+    width: 52px;
+    height: 50px;
+    background: white;
+    position: relative;
+    top:25px;
+    left:58px;
+    border:1px solid #ddd;
+	
+    
+}
+#searchbutton:hover{
+    color:#ff6700;
+    background:orange;
+    cursor:pointer;
+    background: white;
+    
+}
+#transform>div{
+    width: 1300px;;
+    margin: 0 auto;
+    position:relative;
+}
+#transform>div>div{
+    width: 1300px;
+    height: 230px;
+    background: #fff;
+    position:absolute;
+    top:-234px;
+    left: 0;
+	z-index:1;
+    box-shadow:0px 1px 1px 1px #b0b0b0;
+}
+.fcenter{
+    display:flex;
+    justify-content:space-between;
+}
+.style1{
+    width: 210px;
+    height: 201px;
+}
+.style1>img{
+    display:block;
+    margin:35px auto 0;
+    width: 160px;
+    height: 110px;
+}
+.style1>a{
+    display:block;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+.style1>p{
+    font-size: 12px;
+    color: #ff6700;
+    text-align: center;
+    margin-top: 5px;
+}
+#photo{
+    background-image: url(../img/mrtx.jpg);
+    background-position: center center;
+}

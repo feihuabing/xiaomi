@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>小米账户-注册</title>
+	 <link rel="stylesheet" href="css/all.css"/>
+	 <link rel="stylesheet" href="css/register.css"/>
+	 <script src="common.js"></script>
+	 <style>
+		#reg1{
+			width: 300px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius:2px ;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-top: -200px;
+			margin-left: -150px;
+			display: none;
+		}
+		#reg1_b1{
+			display:block;
+			width: 140px;
+			height: 30px;
+			margin:30px auto;
+			background: #ff6700;
+			color: white;
+			border: 0;
+			line-height: 30px;
+			cursor:pointer;
+		}
+	 </style>
+ </head>
+ <body onload=fn()>
+	<div id="d1">
+		<div id="d2">
+			<img src="./img/milogo.png" alt="">
+			<span id="s1">注册小米账号</span>
+			<p class="mt40 fz14">我们已经发送一条验证短信至<span id="phone" class="cff6700"></span></p>
+			<p class="mt20 fz14 mb30">请输入短信中的验证码</p>
+
+			<form action="user/checkyzm" method="get">
+			<input type="text" class="w294h44 dblock p10_20" placeholder="请输入验证码" id="yzm" name="yzm" maxlength="6"/>
+			<p class="w94h21 fz12" id="yzmc"></p>
+				<input type="hidden" id="phone1" name="phone" />
+			<input type="submit" href="" value="下一步" class="dblock w334h44 mt30 bgff6700 bd0 cwhite pointer mb30 text_center lh46" ></form>
+			<a href="register.html" class="dblock w334h44 mt30 bgwhite bdblack pointer mb30 text_center lh46">返回</a>
+		</div>
+	</div>
+	<div id="reg1" class="bgwhite ">
+	    <p class="text_center mt50 fz18">验证码输入错误</p>
+		<button id="reg1_b1" onclick="yc()">确定</button>
+	</div>
+	<script>
+		function fn(){
+			var urlParams=new URLSearchParams(location.search);
+			var phone=urlParams.get('phone');
+			$("phone").innerHTML=phone;
+			$("phone1").value=phone;
+		}
+		function yc(){
+			$("reg1").style.display="none";
+		}
+	</script>
+ </body>
+</html>

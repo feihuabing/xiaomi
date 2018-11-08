@@ -1,0 +1,31 @@
+@media screen and (min-width: 1301px){
+    .header,.body{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1300px){
+    .header,.body{
+        width: 1300px;
+    }
+}
+.header{
+    padding: 20px 0;
+    border-bottom: 2px solid #ff6700;
+}
+.fz36{
+    font-size: 36px;
+}
+.vertical_align_middle{
+    vertical-align: middle;
+}
+.w500{
+    width: 500px;
+}
+.w260{
+    width: 260px;
+}
+.w200h40{
+    width: 200px;
+    height: 40px;
+
+}

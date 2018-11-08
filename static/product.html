@@ -1,0 +1,1119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/product.css"/>
+        <link rel="stylesheet" href="css/all.css"/>
+        <script src="js/all.js"></script>
+        <script src="common.js"></script>
+        <style></style>
+    </head>
+    <body onload="start()">
+        <div id="header"><!--黑色部分-->
+            <div id="header1">
+                <div id="headlist">
+                    <a href="index.html"id="index">小米商城</a>
+                    <a href="#">MIUI</a>
+                    <a href="#">loT</a>
+                    <a href="#">云服务</a>
+                    <a href="#">有品</a>
+                    <a href="#">小爱开放平台</a>
+                    <a href="#">政企服务</a>
+                    <a href="#">Select Region</a>
+                </div>
+                <a href="login.html" id="login">登录</a>
+                <a href="register.html" target="_blank" id="reg">注册</a>
+                <form action="/user/xm_user" method="get">
+                    <input type="submit" id="user" class="hcwhite pointer cb0b0b0 dnone">
+                    <input type="hidden" name="uid" id="uid"/>
+                </form>
+                <form action="/user/quit"><input type="submit" id="tuichu" class="hcwhite pointer cb0b0b0 dnone" value="退出"></form>
+                <a href="#" id="info">消息通知</a>
+                <div id="shoppingcar">
+                    <a href="" onmouseover="showxiala()" onmouseout="hiddenxiala()" id="shoppingcart"><img src="./img/shoppingcar.png" width=20px height=20px>购物车<span>(<span id="num">0</span>)</span></a>
+                </div>
+
+            </div>
+        </div>
+        <div id="header2"><!--头部-->
+            <div id="header3">
+                <div class="absolute" id="headerxiala" onmouseover="showxiala()" onmouseout="hiddenxiala()"><p class="text_center mt40 mb40">购物车中还没有商品，赶紧选购吧!</p></div>
+                <a href="#"><img src="./img/milogo.png" id="milogo" width=65px height=65px></a>
+                <a href="#" id="a816">
+                    <img src="./img/77.gif" width=165px height=70px id="b818">
+                </a>
+                <div id="d1">
+                    <a href="" onmouseover="fn()" onmouseout="fn_1()">小米手机</a>
+                    <a href="#" onmouseover="fn1()" onmouseout="fn1_1()">红米</a>
+                    <a href="#" onmouseover="fn2()" onmouseout="fn2_1()">电视</a>
+                    <a href="#" onmouseover="fn3()" onmouseout="fn3_1()">笔记本</a>
+                    <a href="#" onmouseover="fn4()" onmouseout="fn4_1()">盒子</a>
+                    <a href="#" onmouseover="fn5()" onmouseout="fn5_1()">新品</a>
+                    <a href="#" onmouseover="fn6()" onmouseout="fn6_1()">路由器</a>
+                    <a href="#" onmouseover="fn7()" onmouseout="fn7_1()">智能硬件</a>
+                    <a href="#">服务</a>
+                    <a href="poster.html">社区</a>
+                </div>
+                <input type="text" id="searchtext"><input type="submit" id="searchbutton" value="搜索">
+            </div>
+        </div>
+        <div id="transform">
+            <div>
+                <div id="transform-1" class="fcenter"  onmouseover="fn()" onmouseout="fn_1()">
+                    <div class="style1">
+                        <img src="img/mi8.png" alt=""/>
+                        <a href="product.html?pid=1" id="mi8">小米8</a>
+                        <p>2699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mi8se.png" alt=""/>
+                        <a href="">小米8 SE</a>
+                        <p>1799元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/max3.png" alt=""/>
+                        <a href="">小米Max 3</a>
+                        <p>1699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mix2s.png" alt=""/>
+                        <a href="">小米MIX 2S</a>
+                        <p>3299元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mix2320-220.png" alt=""/>
+                        <a href="product.html?pid=2" id="mix2">小米MIX 2</a>
+                        <p>2599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mi6x.jpg" alt=""/>
+                        <a href="product.html?pid=3" id="mi6x">小米6x</a>
+                        <p>1399元起</p>
+                    </div>
+                </div>
+                <div id="transform-2" class="fcenter" onmouseover="fn1()" onmouseout="fn1_1()">
+                    <div class="style1">
+                        <img src="img/hm6.png" alt=""/>
+                        <a href="">红米6 Pro</a>
+                        <p>999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/hm6.png" alt=""/>
+                        <a href="">红米6</a>
+                        <p>799元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/hm6a.jpg" alt=""/>
+                        <a href="">红米6A</a>
+                        <p>599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/note5-320-220.png" alt=""/>
+                        <a href="">红米Note 5</a>
+                        <p>1099元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/s2-320-220.png" alt=""/>
+                        <a href="">红米S2</a>
+                        <p>999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/5P-320-220.png" alt=""/>
+                        <a href="">红米5 Plus</a>
+                        <p>999元起</p>
+                    </div>
+                </div>
+                <div id="transform-3" class="fcenter" onmouseover="fn2()" onmouseout="fn2_1()">
+                    <div class="style1">
+                        <img src="img/TV475.png" alt=""/>
+                        <a href="">小米电视4 75英寸</a>
+                        <p>8999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/TV4a32.png" alt=""/>
+                        <a href="">小米电视4A 32英寸</a>
+                        <p>899元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a43.png" alt=""/>
+                        <a href="">小米电视4A 43英寸</a>
+                        <p>1399元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a50.png" alt=""/>
+                        <a href="">小米电视4A 50英寸</a>
+                        <p>1799元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a55.png" alt=""/>
+                        <a href="">小米电视4A 55英寸</a>
+                        <p>2299元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a50.png" alt=""/>
+                        <a href="">查看全部小米电视</a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-4" class="fcenter" onmouseover="fn3()" onmouseout="fn3_1()">
+                    <div class="style1">
+                        <img src="img/pingbanok.png" alt=""/>
+                        <a href="">小米平板</a>
+                        <p>1099元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xinbijiben.png" alt=""/>
+                        <a href="">小米游戏本 8代</a>
+                        <p>6699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/c15.6gtx.png" alt=""/>
+                        <a href="">小米笔记本15.6" GTX版</a>
+                        <p>6299元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/320x220youxichuantu.png" alt=""/>
+                        <a href="">小米游戏本</a>
+                        <p>5999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/cpro.png" alt=""/>
+                        <a href="">小米笔记本 Pro</a>
+                        <p>5599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/cair.jpg" alt=""/>
+                        <a href="">小米笔记本 Air 系列</a>
+                        <p>3599元起</p>
+                    </div>
+                </div>
+                <div id="transform-5" class="fcenter" onmouseover="fn4()" onmouseout="fn4_1()">
+                    <div class="style1">
+                        <img src="img/kongtiao320-220.jpg" alt=""/>
+                        <a href="">米家互联网空调</a>
+                        <p>1999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-6" class="fcenter" onmouseover="fn5()" onmouseout="fn5_1()">
+                    <div class="style1">
+                        <img src="img/shouhuan.png" alt=""/>
+                        <a href="">小米手环3</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/luyouqi.png" alt=""/>
+                        <a href="">小米路由器4</a>
+                        <p>199元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xiaomixiaoaiai.png" alt=""/>
+                        <a href="">小米小爱音箱mini</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/toiuyingyi.png" alt=""/>
+                        <a href="">米家投影仪</a>
+                        <p>3999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/VR.png" alt=""/>
+                        <a href="">小米VR一体机</a>
+                        <p>1499元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/shexiangji.png" alt=""/>
+                        <a href="">小米米家智能摄像机 云台版</a>
+                        <p>199元</p>
+                    </div>
+                </div>
+                <div id="transform-7" class="fcenter" onmouseover="fn6()" onmouseout="fn6_1()">
+                    <div class="style1">
+                        <img src="img/xiaomiluyouqi4.png" alt=""/>
+                        <a href="">小米路由器4</a>
+                        <p>179元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4Q.png" alt=""/>
+                        <a href="">小米路由器4Q</a>
+                        <p>69元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/3A.png" alt=""/>
+                        <a href="">小米路由器3A</a>
+                        <p>99元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/3G.png" alt=""/>
+                        <a href="">小米路由器3G</a>
+                        <p>199元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/PRO.png" alt=""/>
+                        <a href="">小米路由器HD/Pro</a>
+                        <p>499元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-8" class="fcenter" onmouseover="fn7()" onmouseout="fn7_1()">
+                    <div class="style1">
+                        <img src="img/xiaomixiaoaiai.png" alt=""/>
+                        <a href="">小米小爱音箱mini</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/wrj.jpg" alt=""/>
+                        <a href="">小米无人机</a>
+                        <p>2999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xiaomijingshuiqi.jpg" alt=""/>
+                        <a href="">小米净水器</a>
+                        <p>1999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/saodijiqiren320-220.jpg" alt=""/>
+                        <a href="">米家扫地机器人</a>
+                        <p>1699元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/dfb.jpg" alt=""/>
+                        <a href="">米家IH电饭煲</a>
+                        <p>999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w100_1300 h63 bdtddd bdbddd boxbuttonshadow">
+            <div class="w1300 h63 mcenter">
+                <p id="pname" class="fz18 lh63 float_left">
+                    小米8
+                </p>
+                <div class="float_right lh63">
+                    <a href="" class="fz14 c888 hcff6700">概述</a>
+                    <span class="ml10 mr10 caaa fz12">|</span>
+                    <a href="" class="fz14 c888 hcff6700">图集</a>
+                    <span class="ml10 mr10 caaa fz12">|</span>
+                    <a href="" class="fz14 c888 hcff6700">参数</a>
+                    <span class="ml10 mr10 caaa fz12">|</span>
+                    <a href="" class="fz14 c888 hcff6700">F码通道</a>
+                    <span class="ml10 mr10 caaa fz12">|</span>
+                    <a href="" class="fz14 c888 hcff6700">用户评价</a>
+                </div>
+            </div>
+        </div>
+        <div class="w100">
+            <div class="w1300 mcenter dflex justify_content_between">
+                <div class="w640 relative">
+                    <img src="img/left.png" alt="" class="p20_10 hbgopacityblack pointer absolute t240 l60" onclick="last()"/>
+                    <img src="img/portal-icon-1.png" alt="" class="w400h400 absolute t80l120" id="broadcastimg1"/>
+                    <img src="img/portal-icon-2.png" alt="" class="w400h400 absolute t80l120 opacity0" id="broadcastimg2"/>
+                    <img src="img/portal-icon-3.png" alt="" class="w400h400 absolute t80l120 opacity0" id="broadcastimg3"/>
+                    <img src="img/portal-icon-4.png" alt="" class="w400h400 absolute t80l120 opacity0" id="broadcastimg4"/>
+                    <img src="img/right.png" alt="" class="p20_10 hbgopacityblack pointer absolute t240 l540" onclick="next()"/>
+                    <div class="absolute w10h10 bg555 bdradius bd3aaa t500 l258 pointer" id="anchors1" onclick="tbroadcast1()" onmouseover="a1555()" onmouseout="a1fff()"></div>
+                    <div class="absolute w10h10 bdradius bd3aaa bgwhite t500 l274 pointer" id="anchors2" onclick="tbroadcast2()" onmouseover="a2555()" onmouseout="a2fff()"></div>
+                    <div class="absolute w10h10 bdradius bd3aaa bgwhite t500 l330 pointer" id="anchors3" onclick="tbroadcast3()" onmouseover="a3555()" onmouseout="a3fff()"></div>
+                    <div class="absolute w10h10 bdradius bd3aaa bgwhite t500 l366 pointer" id="anchors4" onclick="tbroadcast4()" onmouseover="a4555()" onmouseout="a4fff()"></div>
+                </div>
+                <div class="w640">
+                    <p class="fz26 mt30" id="pname1">
+                        小米8
+                    </p>
+                    <p class="fz14 lh20 h40 overflow_hidden caaa" id="pintro">
+                        全球首款双频GPS / 骁龙845处理器 / 红外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏
+                    </p>
+                    <p id="price" class="cff6700 mt10 font_bold">
+                        2699元
+                    </p>
+                    <p class="mt20 bdtddd bdbddd p10_0">
+                        <span class="dinline_block cwhite bgff6700 fz14 w80h25 text_center lh25">赠品</span><span id="gift" class="lh25 h25 dinline_block ml10  c333 fz14"></span><span class="lh25 h25 dinline_block c333 fz14">,赠小米手环2</span>
+                    </p>
+                    <div class="h104 bdaaa mt40">
+                        <span class="mt40 ml50 dinline_block" id="province">江苏省</span>
+                        <span id="city" class="mt40 ml10 dinline_block">无锡市</span>
+                        <span id="district" class="mt40 ml10 dinline_block">锡山区</span>
+                        <span id="town" class="mt40 ml10 dinline_block">东亭镇</span>
+                        <span id="revice_place" class="pointer mt40 ml30 dinline_block cff6700 fz14">修改</span>
+                    </div>
+                    <p class="fz18 mt30">选择版本</p>
+                    <span class="w300h40 bdff6700 dinline_block mt20 pointer" onclick="checkspec1()" id="p_spec1"><span class="cff6700 lh40 ml20" id="spec1">6GB+64GB 全网通</span> <span class="c888 ml50" id="price1">2699元</span></span>
+                    <span class="w300h40 bdaaa dinline_block mt20 ml20 pointer" onclick="checkspec2()" id="p_spec2"><span class=" lh40 ml20" id="spec2">8GB+128GB 全网通</span> <span class="c888 ml50" id="price2">3299元</span></span>
+                    <span class="w300h40 bdaaa dinline_block mt20  pointer" onclick="checkspec3()" id="p_spec3"><span class=" lh40 ml20" id="spec3">6GB+128GB 全网通</span> <span class="c888 ml50" id="price3">2999元</span></span>
+                    <span class="w300h40 bdaaa dinline_block mt20 ml20 pointer" onclick="checkspec4()" id="p_spec4"><span class=" lh40 ml20" id="spec4">6GB+256GB 全网通</span> <span class="c888 ml50" id="price4">3299元</span></span>
+                    <p class="fz18 mt30">选择颜色</p>
+                    <span class="w300h40 bdff6700 dinline_block mt20 pointer cff6700 text_center lh40" id="black" onclick="checkBlack()">黑色</span>
+                    <span class="w300h40 bdaaa dinline_block mt20 pointer text_center lh40 ml20" id="white" onclick=" checkWhite()">白色</span>
+                    <span class="w300h40 bdaaa dinline_block mt20 pointer text_center lh40" id="blue" onclick="checkBlue()">蓝色</span>
+                    <p class="fz20 mt20">选择小米提供的保障服务</p>
+                    <div class=" p30_0 bdaaa mt20 dflex relative pointer w638" id="checkOver1" onclick="checkOver1()">
+                        <div><input type="radio" class="ml40" name="over" value="1" id="ywbzfw"/></div>
+                        <div class="w638">
+                            <p class="fz18 ml40 mb10">意外保障服务</p>
+                            <p class="caaa ml40 fz14 mb10">手机意外掉落/进水/碾压等损坏</p>
+                            <p class="c888 ml40 float_left"><input type="checkbox" id="readed"/>我已阅读 <span class="cff6700">服务条款</span></p>
+                            <p class="float_right c888 fz14 mr30">249元</p>
+                        </div>
+                    </div>
+                    <div class=" p30_0 bdaaa mt20 dflex relative pointer w638" id="checkOver2" onclick="checkOver2()">
+                        <div><input type="radio" class="ml40" name="over" value="2" id="spbzfw"/></div>
+                        <div class="w638">
+                            <p class="fz18 ml40 mb10">碎屏保障服务</p>
+                            <p class="caaa ml40 fz14 mb10">手机意外碎屏</p>
+                            <p class="c888 ml40 float_left"><input type="checkbox" id="readed1"/>我已阅读 <span class="cff6700">服务条款</span></p>
+                            <p class="float_right c888 fz14 mr30">129元</p>
+                        </div>
+                    </div>
+                    <div class="w100 h20 mt30">
+                        <p class="fz14 c888 ml30 float_left" id="checkspec">小米8 6GB+256GB 黑色</p>
+                        <p class="fz14 c888 mr30 float_right" id="checkPrice">3299元</p>
+                    </div>
+                    <div class="w100 h20 mt10 dnone" id="over1">
+                        <p class="fz14 c888 ml30 float_left clear_both">意外保障服务</p>
+                        <p class="fz14 c888 mr30 float_right">249元</p>
+                    </div>
+                    <div class="w100 h20 mt10 dnone" id="over2">
+                        <p class="fz14 c888 ml30 float_left clear_both">碎屏保障服务</p>
+                        <p class="fz14 c888 mr30 float_right">129</p>
+                    </div>
+                    <div class="mt30 ml30">
+                        <span class="cff6700 fz26">总计：<span id="allPrice">2699元</span></span>
+                    </div>
+                    <button class="bd0 outlinenone w300 h63 bgff6700 fz24 cwhite mt50 pointer" onclick="join_shoppingcart()">加入购物车</button>
+                    <div class="h40"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w100_1300 bgf5f5f5">
+            <p class="w1300 p30_0 fz24 c333 mcenter">特别说明</p>
+            <img src="img/proinfo.jpg" class="w1300 mcenter dblock" alt=""/>
+            <p class="w1300 p30_0 fz24 c333 mcenter">官方微信</p>
+            <img src="img/gfwx.jpg" class="w1300 mcenter dblock" alt=""/>
+            <p class="h40"></p>
+        </div>
+        <iframe src="footer.html" class="iframe_footer" frameborder="0"></iframe>
+        <script>
+            function $(id){
+                return document.getElementById(id);
+            }
+            function fn(){
+                    $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                    $("transform-1").style.transform="translateY(234px)";
+					
+            }
+            function fn_1(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(0)"
+				
+            }
+            function fn1(){
+                $("transform-2").style.transition="transform 0.1s linear 0.2s";
+                $("transform-2").style.transform="translateY(234px)";
+				
+            }
+            function fn1_1(){
+                $("transform-2").style.transition="transform 0.1s linear 0.2s";
+                $("transform-2").style.transform="translateY(0)"
+			
+            }
+            function fn2(){
+                $("transform-3").style.transition="transform 0.1s linear 0.2s";
+                $("transform-3").style.transform="translateY(234px)";
+				
+            }
+            function fn2_1(){
+                $("transform-3").style.transition="transform 0.1s linear 0.2s";
+                $("transform-3").style.transform="translateY(0)";
+				
+            }
+            function fn3(){
+                $("transform-4").style.transition="transform 0.1s linear 0.2s";
+                $("transform-4").style.transform="translateY(234px)"
+            }
+            function fn3_1(){
+                $("transform-4").style.transition="transform 0.1s linear 0.2s";
+                $("transform-4").style.transform="translateY(0)"
+            }
+            function fn4(){
+                $("transform-5").style.transition="transform 0.1s linear 0.2s";
+                $("transform-5").style.transform="translateY(234px)"
+            }
+            function fn4_1(){
+                $("transform-5").style.transition="transform 0.1s linear 0.2s";
+                $("transform-5").style.transform="translateY(0)"
+            }
+            function fn5(){
+                $("transform-6").style.transition="transform 0.1s linear 0.2s";
+                $("transform-6").style.transform="translateY(234px)"
+            }
+            function fn5_1(){
+                $("transform-6").style.transition="transform 0.1s linear 0.2s";
+                $("transform-6").style.transform="translateY(0)"
+            }
+            function fn6(){
+                $("transform-7").style.transition="transform 0.1s linear 0.2s";
+                $("transform-7").style.transform="translateY(234px)"
+            }
+            function fn6_1(){
+                $("transform-7").style.transition="transform 0.1s linear 0.2s";
+                $("transform-7").style.transform="translateY(0)"
+            }
+            function fn7(){
+                $("transform-8").style.transition="transform 0.1s linear 0.2s";
+                $("transform-8").style.transform="translateY(234px)"
+            }
+            function fn7_1(){
+                $("transform-8").style.transition="transform 0.1s linear 0.2s";
+                $("transform-8").style.transform="translateY(0)"
+            }
+            function fn8(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(234px)"
+            }
+            function fn8_1(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(0)"
+            }
+            var icon=1;
+            function next(){
+                if(icon==1){
+                    $("broadcastimg1").style.animation="change1 0.5s";
+                    $("broadcastimg2").style.animation="change2 0.5s";
+                    $("anchors1").style.backgroundColor="#fff";
+                    $("anchors2").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg1").style.opacity=0;
+                        $("broadcastimg2").style.opacity=1;
+                    },490);
+                }
+                if(icon==2){
+                    $("broadcastimg2").style.animation="change1 0.5s";
+                    $("broadcastimg3").style.animation="change2 0.5s";
+                    $("anchors2").style.backgroundColor="#fff";
+                    $("anchors3").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg2").style.opacity=0;
+                        $("broadcastimg3").style.opacity=1;
+                    },490);
+                }
+                if(icon==3){
+                    $("broadcastimg3").style.animation="change1 0.5s";
+                    $("broadcastimg4").style.animation="change2 0.5s";
+                    $("anchors3").style.backgroundColor="#fff";
+                    $("anchors4").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg3").style.opacity=0;
+                        $("broadcastimg4").style.opacity=1;
+                    },490);
+                }
+                if(icon==4){
+                    $("broadcastimg4").style.animation="change1 0.5s";
+                    $("broadcastimg1").style.animation="change2 0.5s";
+                    $("anchors4").style.backgroundColor="#fff";
+                    $("anchors1").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg4").style.opacity=0;
+                        $("broadcastimg1").style.opacity=1;
+                    },490);
+                }
+                if(icon==4){
+                    icon=0;
+                }
+                icon++;
+            }
+            function last(){
+                console.log(1)
+                if(icon==1){
+                    $("broadcastimg1").style.animation="change1 0.5s";
+                    $("broadcastimg4").style.animation="change2 0.5s";
+                    $("anchors1").style.backgroundColor="#fff";
+                    $("anchors4").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg1").style.opacity=0;
+                        $("broadcastimg4").style.opacity=1;
+                    },490);
+                }
+                if(icon==4){
+                    $("broadcastimg4").style.animation="change1 0.5s";
+                    $("broadcastimg3").style.animation="change2 0.5s";
+                    $("anchors4").style.backgroundColor="#fff";
+                    $("anchors3").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg4").style.opacity=0;
+                        $("broadcastimg3").style.opacity=1;
+                    },490);
+                }
+                if(icon==3){
+                    $("broadcastimg3").style.animation="change1 0.5s";
+                    $("broadcastimg2").style.animation="change2 0.5s";
+                    $("anchors3").style.backgroundColor="#fff";
+                    $("anchors2").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg3").style.opacity=0;
+                        $("broadcastimg2").style.opacity=1;
+                    },490);
+                }
+                if(icon==2){
+                    $("broadcastimg2").style.animation="change1 0.5s";
+                    $("broadcastimg1").style.animation="change2 0.5s";
+                    $("anchors2").style.backgroundColor="#fff";
+                    $("anchors1").style.backgroundColor="#555";
+                    var timer = null;
+                    timer = setTimeout(()=>{
+                        $("broadcastimg2").style.opacity=0;
+                        $("broadcastimg1").style.opacity=1;
+                    },490);
+                }
+                if(icon==1){
+                    icon=5;
+                }
+                icon--;
+            }
+            function a1555(){
+                $("anchors1").style.backgroundColor="#555";
+            }
+            function a1fff(){
+                if(icon!=1){
+                    $("anchors1").style.backgroundColor="#fff";
+                }
+            }
+            function a2555(){
+                $("anchors2").style.backgroundColor="#555";
+            }
+            function a2fff(){
+                if(icon!=2){
+                    $("anchors2").style.backgroundColor="#fff";
+                }
+            }
+            function a3555(){
+                $("anchors3").style.backgroundColor="#555";
+            }
+            function a3fff(){
+                if(icon!=3){
+                    $("anchors3").style.backgroundColor="#fff";
+                }
+            }
+            function a4555(){
+                $("anchors4").style.backgroundColor="#555";
+            }
+            function a4fff(){
+                if(icon!=4){
+                    $("anchors4").style.backgroundColor="#fff";
+                }
+            }
+            function tbroadcast1(){
+                if(icon!=1){
+                    if(icon==2){
+                        $("broadcastimg1").style.animation="change2 0.5s";
+                        $("broadcastimg2").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg1").style.opacity=1;
+                            $("broadcastimg2").style.opacity=0;
+                        },490);
+                        $("anchors2").style.backgroundColor="#fff";
+                        icon=1;
+                    }
+                    if(icon==3){
+                        $("broadcastimg1").style.animation="change2 0.5s";
+                        $("broadcastimg3").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg1").style.opacity=1;
+                            $("broadcastimg3").style.opacity=0;
+                        },490);
+                        $("anchors3").style.backgroundColor="#fff";
+                        icon=1;
+                    }
+                    if(icon==4){
+                        $("broadcastimg1").style.animation="change2 0.5s";
+                        $("broadcastimg4").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg1").style.opacity=1;
+                            $("broadcastimg4").style.opacity=0;
+                        },490);
+                        $("anchors4").style.backgroundColor="#fff";
+                        icon=1;
+                    }
+                }
+            }
+            function tbroadcast2(){
+                if(icon!=2){
+                    if(icon==1){
+                        $("broadcastimg2").style.animation="change2 0.5s";
+                        $("broadcastimg1").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg2").style.opacity=1;
+                            $("broadcastimg1").style.opacity=0;
+                        },490);
+                        $("anchors1").style.backgroundColor="#fff";
+                        icon=2;
+                    }
+                    if(icon==3){
+                        $("broadcastimg2").style.animation="change2 0.5s";
+                        $("broadcastimg3").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg2").style.opacity=1;
+                            $("broadcastimg3").style.opacity=0;
+                        },490);
+                        $("anchors3").style.backgroundColor="#fff";
+                        icon=2;
+                    }
+                    if(icon==4){
+                        $("broadcastimg2").style.animation="change2 0.5s";
+                        $("broadcastimg4").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg2").style.opacity=1;
+                            $("broadcastimg4").style.opacity=0;
+                        },490);
+                        $("anchors4").style.backgroundColor="#fff";
+                        icon=2;
+                    }
+                }
+            }
+            function tbroadcast3(){
+                if(icon!=3){
+                    if(icon==1){
+                        $("broadcastimg3").style.animation="change2 0.5s";
+                        $("broadcastimg1").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg3").style.opacity=1;
+                            $("broadcastimg1").style.opacity=0;
+                        },490);
+                        $("anchors1").style.backgroundColor="#fff";
+                        icon=3;
+                    }
+                    if(icon==2){
+                        $("broadcastimg3").style.animation="change2 0.5s";
+                        $("broadcastimg2").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg3").style.opacity=1;
+                            $("broadcastimg2").style.opacity=0;
+                        },490);
+                        $("anchors2").style.backgroundColor="#fff";
+                        icon=3;
+                    }
+                    if(icon==4){
+                        $("broadcastimg3").style.animation="change2 0.5s";
+                        $("broadcastimg4").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg3").style.opacity=1;
+                            $("broadcastimg4").style.opacity=0;
+                        },490);
+                        $("anchors4").style.backgroundColor="#fff";
+                        icon=3;
+                    }
+                }
+            }
+            function tbroadcast4(){
+                if(icon!=4){
+                    if(icon==1){
+                        $("broadcastimg4").style.animation="change2 0.5s";
+                        $("broadcastimg1").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg4").style.opacity=1;
+                            $("broadcastimg1").style.opacity=0;
+                        },490);
+                        $("anchors1").style.backgroundColor="#fff";
+                        icon=4;
+                    }
+                    if(icon==2){
+                        $("broadcastimg4").style.animation="change2 0.5s";
+                        $("broadcastimg2").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg4").style.opacity=1;
+                            $("broadcastimg2").style.opacity=0;
+                        },490);
+                        $("anchors2").style.backgroundColor="#fff";
+                        icon=4;
+                    }
+                    if(icon==3){
+                        $("broadcastimg4").style.animation="change2 0.5s";
+                        $("broadcastimg3").style.animation="change1 0.5s";
+                        var timer = setTimeout(()=>{
+                            $("broadcastimg4").style.opacity=1;
+                            $("broadcastimg3").style.opacity=0;
+                        },490);
+                        $("anchors3").style.backgroundColor="#fff";
+                        icon=4;
+                    }
+                }
+            }
+            var spec = $("spec1").innerHTML;
+            function start() {
+                var timer = setInterval(next, 10000);
+                var urlParams = new URLSearchParams(location.search);
+                uid = urlParams.get('uid');
+                pid = urlParams.get('pid');
+                if (uid != null) {
+                    $("index").href = "index.html?uid=" + uid;
+                    $("shoppingcart").href = "shoppingCart.html?uid=" + uid;
+                }
+                getProductNum();
+                myTopShoppingcart();
+                selectuname();
+                selectproduct();
+            }
+            function selectuname(){
+                if(uid!=null){
+                    $("mi8").href=$("mi8").href+"&uid="+uid;
+                    $("mix2").href=$("mix2").href+"&uid="+uid;
+                    $("mi6x").href=$("mi6x").href+"&uid="+uid;
+                    var xhr = createXhr();
+                    xhr.onreadystatechange = function(){
+                        if(xhr.readyState==4&&xhr.status==200){
+                            var res = xhr.responseText;
+                            $("user").value=res;
+                            $("uid").value=uid;
+                        }
+                    }
+                    xhr.open('get','/user/selectuname?uid='+uid,true)
+                    xhr.send(null);
+                    $("user").style.display="block";
+                    $("tuichu").style.display="block";
+                    $("reg").style.display="none";
+                    $("login").style.display="none";
+                }
+            }
+            function selectproduct(){
+                if(pid!=null){
+                    var xhr = createXhr();
+                    xhr.onreadystatechange = function(){
+                        if(xhr.readyState==4&&xhr.status==200){
+                            var res = xhr.responseText;
+                            var res = JSON.parse(res);
+                            var str = res[0];
+                            var pname = str.pname;
+                            $("pname").innerHTML = pname;
+                            $("pname1").innerHTML = pname;
+                            var pintro = str.pintro;
+                            $("pintro").innerHTML = pintro;
+                            var price1 = str.price1;
+                            $("price").innerHTML = price1;
+                            $("price1").innerHTML = price1;
+                            $("checkPrice").innerHTML = price1;
+                            $("allPrice").innerHTML = price1;
+                            var price2 = str.price2;
+                            $("price2").innerHTML = price2;
+                            var price3 = str.price3;
+                            $("price3").innerHTML = price3;
+                            var price4 = str.price4;
+                            $("price4").innerHTML = price4;
+                            var spec1 = str.spec1;
+                            $("spec1").innerHTML = spec1;
+                            $("checkspec").innerHTML = pname+"&nbsp;&nbsp;"+spec1;
+                            $("gift").innerHTML = spec1;
+                            var spec2 = str.spec2;
+                            $("spec2").innerHTML = spec2;
+                            var spec3 = str.spec3;
+                            $("spec3").innerHTML = spec3;
+                            var spec4 = str.spec4;
+                            $("spec4").innerHTML = spec4;
+                        }
+                    }
+                    xhr.open('get','/product/selectproduct?pid='+pid,true)
+                    xhr.send(null);
+                }
+            }
+
+
+            function checkspec1(){
+                $("price").innerHTML = $("price1").innerHTML;
+                $("checkPrice").innerHTML = $("price1").innerHTML;
+                $("checkspec").innerHTML =  $("pname").innerHTML+"&nbsp;&nbsp;"+$("spec1").innerHTML;
+                $("allPrice").innerHTML = $("price1").innerHTML;
+                $("gift").innerHTML = $("spec1").innerHTML;
+                $("p_spec1").style.borderColor = "#ff6700";
+                $("spec1").style.color = "ff6700";
+                $("p_spec2").style.borderColor = "#aaa";
+                $("spec2").style.color = "black";
+                $("p_spec3").style.borderColor = "#aaa";
+                $("spec3").style.color = "black";
+                $("p_spec4").style.borderColor = "#aaa";
+                $("spec4").style.color = "black";
+                cleanOver();
+                spec = $("spec1").innerHTML;
+            }
+            function checkspec2(){
+                $("price").innerHTML = $("price2").innerHTML;
+                $("checkPrice").innerHTML = $("price2").innerHTML;
+                $("checkspec").innerHTML =  $("pname").innerHTML+"&nbsp;&nbsp;"+$("spec2").innerHTML;
+                $("allPrice").innerHTML = $("price2").innerHTML;
+                $("gift").innerHTML = $("spec2").innerHTML;
+                $("p_spec2").style.borderColor = "#ff6700";
+                $("spec2").style.color = "ff6700";
+                $("p_spec1").style.borderColor = "#aaa";
+                $("spec1").style.color = "black";
+                $("p_spec3").style.borderColor = "#aaa";
+                $("spec3").style.color = "black";
+                $("p_spec4").style.borderColor = "#aaa";
+                $("spec4").style.color = "black";
+                cleanOver();
+                spec = $("spec2").innerHTML;
+            }
+            function checkspec3(){
+                $("price").innerHTML = $("price3").innerHTML;
+                $("checkPrice").innerHTML = $("price3").innerHTML;
+                $("checkspec").innerHTML =  $("pname").innerHTML+"&nbsp;&nbsp;"+$("spec3").innerHTML;
+                $("allPrice").innerHTML = $("price3").innerHTML;
+                $("gift").innerHTML = $("spec3").innerHTML;
+                $("p_spec3").style.borderColor = "#ff6700";
+                $("spec3").style.color = "ff6700";
+                $("p_spec1").style.borderColor = "#aaa";
+                $("spec1").style.color = "black";
+                $("p_spec2").style.borderColor = "#aaa";
+                $("spec2").style.color = "black";
+                $("p_spec4").style.borderColor = "#aaa";
+                $("spec4").style.color = "black";
+                cleanOver();
+                spec = $("spec3").innerHTML;
+            }
+            function checkspec4(){
+                $("price").innerHTML = $("price4").innerHTML;
+                $("checkPrice").innerHTML = $("price4").innerHTML;
+                $("checkspec").innerHTML =  $("pname").innerHTML+"&nbsp;&nbsp;"+$("spec4").innerHTML;
+                $("allPrice").innerHTML = $("price4").innerHTML;
+                $("gift").innerHTML = $("spec4").innerHTML;
+                $("p_spec4").style.borderColor = "#ff6700";
+                $("spec4").style.color = "ff6700";
+                $("p_spec1").style.borderColor = "#aaa";
+                $("spec1").style.color = "black";
+                $("p_spec3").style.borderColor = "#aaa";
+                $("spec3").style.color = "black";
+                $("p_spec2").style.borderColor = "#aaa";
+                $("spec2").style.color = "black";
+                cleanOver();
+                spec = $("spec4").innerHTML;
+            }
+            var color = "黑色";
+            function checkBlack(){
+                $("black").style.color = "#ff6700";
+                $("black").style.borderColor = "#ff6700";
+                $("white").style.color = "black";
+                $("white").style.borderColor = "#aaa";
+                $("blue").style.color = "black";
+                $("blue").style.borderColor = "#aaa";
+                color="黑色";
+            }
+            function checkWhite(){
+                $("black").style.color = "black"
+                $("black").style.borderColor = "#aaa";
+                $("white").style.color = "#ff6700";
+                $("white").style.borderColor = "#ff6700";
+                $("blue").style.color = "black";
+                $("blue").style.borderColor = "#aaa";
+                color="白色";
+            }
+            function checkBlue(){
+                $("black").style.color = "black"
+                $("black").style.borderColor = "#aaa";
+                $("white").style.color = "black"
+                $("white").style.borderColor = "#aaa";
+                $("blue").style.color = "#ff6700";
+                $("blue").style.borderColor = "#ff6700";
+                color="蓝色";
+            }
+            function tuichu() {
+                $("user").style.display = "none";
+                $("tuichu").style.display = "none";
+                $("reg").style.display = "block";
+                $("login").style.display = "block";
+                uid=null;
+            }
+            var over = 0;
+            var checkover1=0;
+            var checkover2=0;
+            function checkOver1(){
+
+                if(checkover1%2==0){
+                    $("ywbzfw").checked = true;
+                    $("readed").checked = true;
+                    $("checkOver1").style.borderColor = "#ff6700";
+                    $("spbzfw").checked = false;
+                    $("readed1").checked = false;
+                    $("checkOver2").style.borderColor = "#aaa";
+
+                    $("over1").style.display = "block";
+                    $("over2").style.display = "none";
+                    over = 1;
+                    if(checkover2%2==0){
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)+249+"元";
+                    }else{
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)+249+"元";
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)-129+"元";
+                        checkover2=0;
+                    }
+                }else{
+                    $("ywbzfw").checked = false;
+                    $("readed").checked = false;
+                    $("checkOver1").style.borderColor = "#aaa";
+                    $("over1").style.display = "none";
+                    $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)-249+"元";
+                    over = 0;
+                }
+                checkover1++;
+            }
+
+            function checkOver2(){
+                if(checkover2%2==0){
+                    $("spbzfw").checked = true;
+                    $("readed1").checked = true;
+                    $("checkOver2").style.borderColor = "#ff6700";
+                    $("ywbzfw").checked = false;
+                    $("readed").checked = false;
+                    $("checkOver1").style.borderColor = "#aaa";
+                    $("over1").style.display = "none";
+                    $("over2").style.display = "block";
+                    over = 2;
+                    if(checkover1%2==0){
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)+129+"元";
+                    }else{
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)+129+"元";
+                        $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)-249+"元";
+                        checkover1=0;
+                    }
+                }else{
+                    $("spbzfw").checked = false;
+                    $("readed1").checked = false;
+                    $("checkOver2").style.borderColor = "#aaa";
+                    $("over2").style.display = "none";
+                    $("allPrice").innerHTML=parseInt($("allPrice").innerHTML)-129+"元";
+                    over = 0;
+                }
+                checkover2++;
+            }
+            function cleanOver(){
+                $("ywbzfw").checked = false;
+                $("readed").checked = false;
+                $("checkOver1").style.borderColor = "#aaa";
+                $("over1").style.display = "none";
+                $("spbzfw").checked = false;
+                $("readed1").checked = false;
+                $("checkOver2").style.borderColor = "#aaa";
+                $("over2").style.display = "none";
+                checkover1=0;
+                checkover2=0;
+            }
+            function myTopShoppingcart(){
+                var urlParams=new URLSearchParams(location.search);
+                uid=urlParams.get('uid');
+                var xhr = createXhr();
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var res = xhr.responseText;
+                        var res = JSON.parse(res);
+                        if(res.length>0){
+                            $("headerxiala").innerHTML="";
+                            for(var a in res){
+                                $("headerxiala").innerHTML=$("headerxiala").innerHTML+"<div class='w280h80 dflex'><div class='w150h50'>"+res[a].product_name+"&nbsp;&nbsp;&nbsp;&nbsp;"+res[a].color+"&nbsp;&nbsp;&nbsp;&nbsp;"+res[a].spec+"</div> <div class='w130h50'>"+res[a].price+"*"+res[a].product_num+"</div></div>";
+                            }
+                        }
+                    }
+                }
+                xhr.open('get','/product/getProduct?uid='+uid,true)
+                xhr.send(null);
+            }
+            function getProductNum(){
+                var urlParams=new URLSearchParams(location.search);
+                uid=urlParams.get('uid');
+                var xhr = createXhr();
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var res = xhr.responseText;
+                        var res = JSON.parse(res);
+                        var num=0;
+                        for(a in res){
+                            num = num+parseInt(res[a].product_num);
+                        }
+                        $("num").innerHTML=num;
+                    }
+                }
+                xhr.open('get','/product/getProduct?uid='+uid,true)
+                xhr.send(null);
+            }
+            function join_shoppingcart(){
+                var urlParams=new URLSearchParams(location.search);
+                uid=urlParams.get('uid');
+				sid=urlParams.get('sid');
+                if(uid!=null){
+                    pname = $("pname1").innerHTML;
+                    var price = $("allPrice").innerHTML;
+                    var xhr = createXhr();
+                    xhr.onreadystatechange=function(){
+                        if(xhr.readyState==4&&xhr.status==200){
+                            var res = xhr.responseText;
+							document.write(`<script>alert("加入购物车成功");location.href="http://47.94.218.246:4000/product.html?pid=${pid}&uid=${uid}"<\/script>`)
+                        }
+                    }
+                    xhr.open('get','/product/shoppingcart?uid='+uid+'&pname='+pname+'&spec='+spec+'&price='+price+'&color='+color+'&over='+over,true);
+                    xhr.send(null);
+                    $("num").innerHTML=parseInt($("num").innerHTML)+1;
+                }
+            }
+            function showxiala(){
+                if($("num").innerHTML==0){
+                    $("headerxiala").style.animation="change 0.5s";
+                    var timer = setTimeout(()=>{
+                        $("headerxiala").style.height="100px";
+                    },480)
+                }else{
+                    $("headerxiala").style.animation="change3 0.5s";
+                    var timer = setTimeout(()=>{
+                        $("headerxiala").style.height="300px";
+                    },480)
+                }
+            }
+            function hiddenxiala(){
+                if($("num").innerHTML==0){
+                    $("headerxiala").style.animation="change4 0.5s";
+                    var timer = setTimeout(()=>{
+                        $("headerxiala").style.height="0";
+                    },480)
+                }else{
+                    $("headerxiala").style.animation="change5 0.5s";
+                    var timer = setTimeout(()=>{
+                        $("headerxiala").style.height="0";
+                    },480)
+                }
+            }
+        </script>
+    </body>
+</html>

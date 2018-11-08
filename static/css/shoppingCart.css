@@ -1,0 +1,195 @@
+.p20_0{
+    padding: 20px 0;
+}
+.lh55{
+    line-height: 55px;
+}
+@media screen  and (min-width:1301px) {
+    #header,#body{
+        width: 100%;
+    }
+}
+@media screen  and (max-width:1300px) {
+    #header,#body{
+        width: 1300px;
+    }
+}
+.fz30{
+    font-size: 30px;
+}
+.inline_block{
+    display: inline-block;
+}
+.bdb3ff6700{
+    border-bottom: 3px solid #ff6700;
+}
+.ml150mt100{
+    margin-left: 150px;
+    margin-top: 100px;
+}
+.fz40{
+    font-size: 40px;
+}
+.mt200{
+    margin-top: 170px;
+}
+.w172h50{
+    width: 172px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.h70{
+    height: 70px;
+}
+.m50c{
+    margin: 50px auto 0;
+}
+.lh70{
+    line-height: 70px;
+}
+.ml130{
+    margin-left:130px;
+}
+.ml400{
+    margin-left: 400px;
+}
+.ml150{
+    margin-left: 150px;
+}
+.ml70{
+    margin-left: 70px;
+}
+.inline_block{
+    display: inline-block;
+}
+.pname{
+    width: 380px;
+    font-size: 18px;
+    margin-left: 70px;
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    display: inline-block;
+}
+.one_price{
+    font-size: 18px;
+    margin-left: 70px;
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:-5px;
+}
+.over{
+    font-size: 18px;
+    margin-left: 50px;
+    width: 108px;
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:-5px;
+}
+.num{
+    font-size: 18px;
+    margin-left: 50px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #888;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:5px;
+}
+
+.numsub,.numplus{
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    background: #fff;
+    outline: none;
+    border: 0;
+}
+.allnum{
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: text;
+}
+.hbgddd:hover{
+    background: #ddd;
+}
+.allprice_one{
+    font-size: 18px;
+    margin-left: 70px;
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:-5px;
+}
+.yuan{
+    font-size: 18px;
+    height: 21px;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:-5px;
+}
+.delete{
+    font-size: 18px;
+    margin-left: 1200px;
+    height: 21px;
+    width: 21px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 21px;
+    display: inline-block;
+    position: relative;
+    top:-25px;
+    cursor: pointer;
+    background: #fff;
+}
+.check{
+    position: relative;
+}
+.hbgred:hover{
+    background: red;
+    color: white;
+
+}
+.m20auto{
+    margin: 20px auto 50px;
+}
+#pay{
+    display: inline-block;
+    float: right;
+    height: 50px;
+    width: 200px;
+    background: #ff6700;
+    text-align: center;
+    line-height:50px;
+    color: white;
+
+}
+.clear_both{
+    clear: both;
+}
+.m20auto{
+    margin: 20px auto;
+}
+.ballprice{
+    line-height: 50px;
+    float: right;
+    margin-right: 50px;
+    color: #ff6700;
+}
+.fz40{
+    font-size: 36px;
+}

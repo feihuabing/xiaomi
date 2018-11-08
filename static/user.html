@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/user.css"/>
+        <link rel="stylesheet" href="css/all.css"/>
+        <script src="js/all.js"></script>
+        <script src="common.js"></script>
+        <style></style>
+    </head>
+    <body onload="start()">
+        <div id="header"><!--黑色部分-->
+            <div id="header1">
+                <div id="headlist">
+                    <a href="index.html" id="index">小米商城</a>
+                    <a href="#">MIUI</a>
+                    <a href="#">loT</a>
+                    <a href="#">云服务</a>
+                    <a href="#">有品</a>
+                    <a href="#">小爱开放平台</a>
+                    <a href="#">政企服务</a>
+                    <a href="#">Select Region</a>
+                </div>
+                <a href="#" id="login">登录</a>
+                <a href="register.html" target="_blank" id="reg">注册</a>
+                <form action="/user/xm_user" method="get">
+                    <input type="submit" id="user" class="hcwhite pointer cb0b0b0 dnone">
+                    <input type="hidden" name="uid" id="uid"/>
+                </form>
+                <form action="/user/quit"><input type="submit" id="tuichu" class="hcwhite pointer cb0b0b0 dnone" value="退出"></form>
+                <a href="#" id="info">消息通知</a>
+                <div id="shoppingcar">
+                    <a href="#" onmouseover="showxiala()" onmouseout="hiddenxiala()" id="shoppingcart"><img src="./img/shoppingcar.png" width=20px height=20px>购物车<span>(<span id="num">0</span>)</span></a>
+                </div>
+
+            </div>
+        </div>
+        <div id="header2"><!--头部-->
+            <div id="header3">
+                <div class="absolute" id="headerxiala" onmouseover="showxiala()" onmouseout="hiddenxiala()"><p class="text_center mt40 mb40">购物车中还没有商品，赶紧选购吧!</p></div>
+                <a href="#"><img src="./img/milogo.png" id="milogo" width=65px height=65px></a>
+                <a href="#" id="a816">
+                    <img src="./img/77.gif" width=165px height=70px id="b818">
+                </a>
+                <div id="d1">
+                    <a href="#" onmouseover="fn()" onmouseout="fn_1()">小米手机</a>
+                    <a href="#" onmouseover="fn1()" onmouseout="fn1_1()">红米</a>
+                    <a href="#" onmouseover="fn2()" onmouseout="fn2_1()">电视</a>
+                    <a href="#" onmouseover="fn3()" onmouseout="fn3_1()">笔记本</a>
+                    <a href="#" onmouseover="fn4()" onmouseout="fn4_1()">盒子</a>
+                    <a href="#" onmouseover="fn5()" onmouseout="fn5_1()">新品</a>
+                    <a href="#" onmouseover="fn6()" onmouseout="fn6_1()">路由器</a>
+                    <a href="#" onmouseover="fn7()" onmouseout="fn7_1()">智能硬件</a>
+                    <a href="#">服务</a>
+                    <a href="poster.html">社区</a>
+                </div>
+                <input type="text" id="searchtext"><input type="submit" id="searchbutton" value="搜索">
+            </div>
+        </div>
+        <div id="transform">
+            <div>
+                <div id="transform-1" class="fcenter"  onmouseover="fn()" onmouseout="fn_1()">
+                    <div class="style1">
+                        <img src="img/mi8.png" alt=""/>
+                        <a href="">小米8</a>
+                        <p>2699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mi8se.png" alt=""/>
+                        <a href="">小米8 SE</a>
+                        <p>1799元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/max3.png" alt=""/>
+                        <a href="">小米Max 3</a>
+                        <p>1699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mix2s.png" alt=""/>
+                        <a href="">小米MIX 2S</a>
+                        <p>3299元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mix2320-220.png" alt=""/>
+                        <a href="">小米MIX 2</a>
+                        <p>2599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/mi6x.jpg" alt=""/>
+                        <a href="">小米6x</a>
+                        <p>1399元起</p>
+                    </div>
+                </div>
+                <div id="transform-2" class="fcenter" onmouseover="fn1()" onmouseout="fn1_1()">
+                    <div class="style1">
+                        <img src="img/hm6.png" alt=""/>
+                        <a href="">红米6 Pro</a>
+                        <p>999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/hm6.png" alt=""/>
+                        <a href="">红米6</a>
+                        <p>799元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/hm6a.jpg" alt=""/>
+                        <a href="">红米6A</a>
+                        <p>599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/note5-320-220.png" alt=""/>
+                        <a href="">红米Note 5</a>
+                        <p>1099元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/s2-320-220.png" alt=""/>
+                        <a href="">红米S2</a>
+                        <p>999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/5P-320-220.png" alt=""/>
+                        <a href="">红米5 Plus</a>
+                        <p>999元起</p>
+                    </div>
+                </div>
+                <div id="transform-3" class="fcenter" onmouseover="fn2()" onmouseout="fn2_1()">
+                    <div class="style1">
+                        <img src="img/TV475.png" alt=""/>
+                        <a href="">小米电视4 75英寸</a>
+                        <p>8999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/TV4a32.png" alt=""/>
+                        <a href="">小米电视4A 32英寸</a>
+                        <p>899元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a43.png" alt=""/>
+                        <a href="">小米电视4A 43英寸</a>
+                        <p>1399元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a50.png" alt=""/>
+                        <a href="">小米电视4A 50英寸</a>
+                        <p>1799元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a55.png" alt=""/>
+                        <a href="">小米电视4A 55英寸</a>
+                        <p>2299元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4a50.png" alt=""/>
+                        <a href="">查看全部小米电视</a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-4" class="fcenter" onmouseover="fn3()" onmouseout="fn3_1()">
+                    <div class="style1">
+                        <img src="img/pingbanok.png" alt=""/>
+                        <a href="">小米平板</a>
+                        <p>1099元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xinbijiben.png" alt=""/>
+                        <a href="">小米游戏本 8代</a>
+                        <p>6699元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/c15.6gtx.png" alt=""/>
+                        <a href="">小米笔记本15.6" GTX版</a>
+                        <p>6299元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/320x220youxichuantu.png" alt=""/>
+                        <a href="">小米游戏本</a>
+                        <p>5999元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/cpro.png" alt=""/>
+                        <a href="">小米笔记本 Pro</a>
+                        <p>5599元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/cair.jpg" alt=""/>
+                        <a href="">小米笔记本 Air 系列</a>
+                        <p>3599元起</p>
+                    </div>
+                </div>
+                <div id="transform-5" class="fcenter" onmouseover="fn4()" onmouseout="fn4_1()">
+                    <div class="style1">
+                        <img src="img/kongtiao320-220.jpg" alt=""/>
+                        <a href="">米家互联网空调</a>
+                        <p>1999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-6" class="fcenter" onmouseover="fn5()" onmouseout="fn5_1()">
+                    <div class="style1">
+                        <img src="img/shouhuan.png" alt=""/>
+                        <a href="">小米手环3</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/luyouqi.png" alt=""/>
+                        <a href="">小米路由器4</a>
+                        <p>199元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xiaomixiaoaiai.png" alt=""/>
+                        <a href="">小米小爱音箱mini</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/toiuyingyi.png" alt=""/>
+                        <a href="">米家投影仪</a>
+                        <p>3999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/VR.png" alt=""/>
+                        <a href="">小米VR一体机</a>
+                        <p>1499元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/shexiangji.png" alt=""/>
+                        <a href="">小米米家智能摄像机 云台版</a>
+                        <p>199元</p>
+                    </div>
+                </div>
+                <div id="transform-7" class="fcenter" onmouseover="fn6()" onmouseout="fn6_1()">
+                    <div class="style1">
+                        <img src="img/xiaomiluyouqi4.png" alt=""/>
+                        <a href="">小米路由器4</a>
+                        <p>179元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/4Q.png" alt=""/>
+                        <a href="">小米路由器4Q</a>
+                        <p>69元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/3A.png" alt=""/>
+                        <a href="">小米路由器3A</a>
+                        <p>99元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/3G.png" alt=""/>
+                        <a href="">小米路由器3G</a>
+                        <p>199元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/PRO.png" alt=""/>
+                        <a href="">小米路由器HD/Pro</a>
+                        <p>499元起</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="transform-8" class="fcenter" onmouseover="fn7()" onmouseout="fn7_1()">
+                    <div class="style1">
+                        <img src="img/xiaomixiaoaiai.png" alt=""/>
+                        <a href="">小米小爱音箱mini</a>
+                        <p>169元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/wrj.jpg" alt=""/>
+                        <a href="">小米无人机</a>
+                        <p>2999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/xiaomijingshuiqi.jpg" alt=""/>
+                        <a href="">小米净水器</a>
+                        <p>1999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/saodijiqiren320-220.jpg" alt=""/>
+                        <a href="">米家扫地机器人</a>
+                        <p>1699元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="img/dfb.jpg" alt=""/>
+                        <a href="">米家IH电饭煲</a>
+                        <p>999元</p>
+                    </div>
+                    <div class="style1">
+                        <img src="" alt=""/>
+                        <a href=""></a>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="bgf5f5f5 w100">
+            <div class="w1300 dflex justify_content_between mcenter">
+                <div class="w250 bgwhite mt30">
+                    <h4 class="weight_normal mt50 ml40">订单中心</h4>
+                    <ul class="list_none p20_40 fz14">
+                        <li class="p10_0"><a href="" class="c888 hc000" id="order">我的订单</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">意外保</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000"> 团购订单</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">评价晒单（1）</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">话费充值订单</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000"> 以旧换新订单</a></li>
+                    </ul>
+                    <h4 class="weight_normal mt20 ml40">个人中心</h4>
+                    <ul class="list_none p20_40 fz14">
+                        <li class="p10_0"><a href="" class="c888 hc000">我的个人中心</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">消息通知</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000"> 购买资格</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">现金账户（1）</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">小米礼品卡</a></li>
+                        <li class="p10_0"><a href="" class="c888 hc000">现金券</a></li>
+                    </ul>
+                </div>
+                <div class="w1000 bgwhite mt30">
+                    <div class="w900 mcenter dflex p50_0 bdbddd">
+                        <div class="w580 dflex">
+                            <div class="w150h150 bdradius" id="photo">
+                            </div>
+                            <div class="ml30">
+                                <p class="fz26 mt40" id="user_name">费华兵</p>
+                                <p class="c888 mb20" id="hello">下午好~</p>
+
+                                <form action="/user/userinfo">
+                                    <input type="submit" class="cff6700 fz14 bd0 bgwhite outlinenone pointer" value="修改个人信息&nbsp;>">
+                                    <input type="hidden" name="uid" id="uid1"/>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="w320">
+                            <p class="mt40 fz14">账户安全：<span class="cff6700">较高</span></p>
+                            <p class="mt20 fz14">绑定手机：<span id="phone"></span></p>
+                            <p class="mt20 fz14">绑定邮箱：<span id="email"></span></p>
+                        </div>
+                    </div>
+                    <div class="w900 dflex flex_wrap mcenter p50_0">
+                        <div class="w400 dflex">
+                            <div class="w100px bdradius"><img src="img/portal-icon-1.png" alt=""/></div>
+                            <div class="w300">
+                                <p class="mt20 ml20 c888 mb10">待支付的订单: <span class="cff6700">0</span></p>
+                                <a href="" class="ml20 fz14 c888">查看待支付的订单></a>
+                            </div>
+                        </div>
+                        <div class="w400 dflex">
+                            <div class="w100px bdradius"><img src="img/portal-icon-2.png" alt=""/></div>
+                            <div class="w300">
+                                <p class="mt20 ml20 c888 mb10">待收货的订单: <span class="cff6700">0</span></p>
+                                <a href="" class="ml20 fz14 c888">查看待收货的订单></a>
+                            </div>
+                        </div>
+                        <div class="w400 dflex mt40">
+                            <div class="w100px bdradius"><img src="img/portal-icon-3.png" alt=""/></div>
+                            <div class="w300">
+                                <p class="mt20 ml20 c888 mb10">待评价商品数: <span class="cff6700">0</span></p>
+                                <a href="" class="ml20 fz14 c888">查看待评价商品></a>
+                            </div>
+                        </div>
+                        <div class="w400 dflex mt40">
+                            <div class="w100px bdradius"><img src="img/portal-icon-4.png" alt=""/></div>
+                            <div class="w300">
+                                <p class="mt20 ml20 c888 mb10">喜欢的商品: <span class="cff6700">0</span></p>
+                                <a href="" class="ml20 fz14 c888">查看喜欢的商品></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="h20"></div>
+        </div>
+        <iframe src="footer.html" class="iframe_footer" frameborder="0"></iframe>
+        <script>
+            function $(id){
+                return document.getElementById(id);
+            }
+            function fn(){
+                    $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                    $("transform-1").style.transform="translateY(234px)";
+					
+            }
+            function fn_1(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(0)"
+				
+            }
+            function fn1(){
+                $("transform-2").style.transition="transform 0.1s linear 0.2s";
+                $("transform-2").style.transform="translateY(234px)";
+				
+            }
+            function fn1_1(){
+                $("transform-2").style.transition="transform 0.1s linear 0.2s";
+                $("transform-2").style.transform="translateY(0)"
+			
+            }
+            function fn2(){
+                $("transform-3").style.transition="transform 0.1s linear 0.2s";
+                $("transform-3").style.transform="translateY(234px)";
+				
+            }
+            function fn2_1(){
+                $("transform-3").style.transition="transform 0.1s linear 0.2s";
+                $("transform-3").style.transform="translateY(0)";
+				
+            }
+            function fn3(){
+                $("transform-4").style.transition="transform 0.1s linear 0.2s";
+                $("transform-4").style.transform="translateY(234px)"
+            }
+            function fn3_1(){
+                $("transform-4").style.transition="transform 0.1s linear 0.2s";
+                $("transform-4").style.transform="translateY(0)"
+            }
+            function fn4(){
+                $("transform-5").style.transition="transform 0.1s linear 0.2s";
+                $("transform-5").style.transform="translateY(234px)"
+            }
+            function fn4_1(){
+                $("transform-5").style.transition="transform 0.1s linear 0.2s";
+                $("transform-5").style.transform="translateY(0)"
+            }
+            function fn5(){
+                $("transform-6").style.transition="transform 0.1s linear 0.2s";
+                $("transform-6").style.transform="translateY(234px)"
+            }
+            function fn5_1(){
+                $("transform-6").style.transition="transform 0.1s linear 0.2s";
+                $("transform-6").style.transform="translateY(0)"
+            }
+            function fn6(){
+                $("transform-7").style.transition="transform 0.1s linear 0.2s";
+                $("transform-7").style.transform="translateY(234px)"
+            }
+            function fn6_1(){
+                $("transform-7").style.transition="transform 0.1s linear 0.2s";
+                $("transform-7").style.transform="translateY(0)"
+            }
+            function fn7(){
+                $("transform-8").style.transition="transform 0.1s linear 0.2s";
+                $("transform-8").style.transform="translateY(234px)"
+            }
+            function fn7_1(){
+                $("transform-8").style.transition="transform 0.1s linear 0.2s";
+                $("transform-8").style.transform="translateY(0)"
+            }
+            function fn8(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(234px)"
+            }
+            function fn8_1(){
+                $("transform-1").style.transition="transform 0.1s linear 0.2s";
+                $("transform-1").style.transform="translateY(0)"
+            }
+            function start(){
+                var urlParams=new URLSearchParams(location.search);
+                uid=urlParams.get('uid');
+                myTopShoppingcart();
+                getProductNum();
+                if(uid!=null){
+                    $("index").href="index.html?uid="+uid;
+                    $("order").href="order.html?uid="+uid;
+                }
+                $("uid1").value=uid;
+                if(uid!=""&&uid!=null) {
+                    var xhr = createXhr();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var res = xhr.responseText;
+                            res = JSON.parse(res);
+                            console.log(res);
+                            var phone = res[0].phone;
+                            var user_name = res[0].user_name;
+                            var email = res[0].email;
+                            var uname = res[0].uname;
+                            if (user_name != null) {
+                                $("user_name").innerHTML = user_name;
+                            } else {
+                                $("user_name").innerHTML = phone;
+                            }
+                            $("phone").innerHTML = phone;
+                            if (email != "null") {
+                                $("email").innerHTML = email;
+                            } else {
+                                $("email").innerHTML = "未填写邮箱";
+                            }
+                            if(user_name==null){
+                                $("user").value = uname;
+                            }else{
+                                $("user").value = user_name;
+                            }
+
+                            $("uid").value = uid;
+                        }
+                    }
+                    xhr.open('get', '/user/selectuser?uid=' + uid, true)
+                    xhr.send(null);
+
+                    $("user").style.display = "block";
+                    $("tuichu").style.display = "block";
+                    $("reg").style.display = "none";
+                    $("login").style.display = "none";
+                }
+                var date = new Date();
+                var hour = date.getHours();
+                if(hour<12){
+                    $("hello").innerHTML="上午好~";
+                }else if(hour<18){
+                    $("hello").innerHTML="下午好~";
+                }else{
+                    $("hello").innerHTML="晚上好~";
+                }
+
+            }
+            function tuichu() {
+                $("user").style.display = "none";
+                $("tuichu").style.display = "none";
+                $("reg").style.display = "block";
+                $("login").style.display = "block";
+                uid=null;
+            }
+        </script>
+    </body>
+</html>
